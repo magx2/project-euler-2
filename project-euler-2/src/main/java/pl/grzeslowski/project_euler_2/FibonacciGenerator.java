@@ -20,18 +20,13 @@ public final class FibonacciGenerator {
         if (cache.containsKey(index)) {
             return cache.get(index);
         } else {
-            long left=1;
-            long right=1;
+            final long left = getFibonacciTerm(index - 1);
+            final long right = getFibonacciTerm(index - 2);
             
-            for (int i = 2; i <= index; i++) {
-                final long tmp = left + right;
-                left=right;
-                right = tmp;
-            }
-            
-            cache.put(index, right);
-            
-            return right;
+            final long result = left + right;
+            cache.put(index, result);
+
+            return result;
         }
     }
 }
