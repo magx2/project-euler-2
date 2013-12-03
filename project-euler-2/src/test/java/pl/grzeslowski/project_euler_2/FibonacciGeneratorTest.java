@@ -22,7 +22,7 @@ public class FibonacciGeneratorTest {
 
     @Parameters
     public static Collection<Object[]> data() {
-        final Object[][] data = new Object[][] { { 1, 1 },
+        final Object[][] data = new Object[][] { { 1, 1 }, { 2, 2 },
                 { 3, 3 }, { 4, 5 }, { 8, 34 },
                 { 10, 89 } };
         return Arrays.asList(data);
